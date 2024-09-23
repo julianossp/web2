@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 200px;
+      color: white;
+      margin-bottom: 20px 0;
+      line-height: 100px;
+      text-align: center;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">BOX</div>
+  <button type="button" id="btn">Cancelar interval</button>
+<script>
+  const box = document.querySelector('#box');
+  const alternaCor = (cor1, cor2) => {
+    if (box.style.backgroundColor != cor1){
+      box.style.backgroundColor = cor1;
+    }else{
+      box.style.backgroundColor = cor2;
+    }
+  };
+  intervalo = setInterval(alternaCor, 500, "yellow", "orange");  
+  
+  const btnCancelar = document.querySelector('#btn');
+  btnCancelar.addEventListener('click', ()=>clearInterval(intervalo))
+</script>
+
+</body>
+</html>

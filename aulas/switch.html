@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="msg">Mensagens</h2>
+    <script>
+        const ufSul = prompt("Digite a UF região sul");
+        let mensagem = document.getElementById('msg');
+        switch (ufSul) {
+            case "RS":
+                mensagem.innerText = "Rio Grande do Sul";
+                break;
+            case "SC":
+                mensagem.innerText = "Santa Catarina";
+                break;
+            case "PR":
+                mensagem.innerText = "Paraná";
+                break;
+            default:
+                mensagem.innerText = "Não é uma sigla da região Sul";
+        }''
+        
+    </script>
+</body>
+
+</html>

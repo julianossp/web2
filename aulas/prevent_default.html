@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="https://libertas.edu.br/">Ir para o site da Libertas</a>
+  
+  <script>
+    const linkBizarro = document.querySelectorAll("a")[0];
+
+    const mudaCor = (event) => {
+      const body = document.querySelector("body");
+      event.preventDefault();
+      body.style.backgroundColor = "red";
+    }
+    
+    linkBizarro.addEventListener("click", mudaCor);
+
+  </script>
+</body>
+</html>

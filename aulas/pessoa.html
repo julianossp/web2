@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Isto é Javascript</h2>
+
+    <script>
+        Juliano = {
+            nome: "Juliano",
+            idade: 53,
+            altura: 1.78,
+            andar: function () {
+                console.log("Juliano esta caminhando");
+            },
+            lerLivro: function (titulo) {
+                console.log("O Juliano esta lendo", titulo)
+            }
+        }
+
+        let nome = Juliano.nome;
+        let idade = Juliano.idade
+
+        nome = 'qualquer coisa'
+
+        var confirma = confirm(`
+    Você tem certeza que quer apagar o arquivo?
+    Essa operação não poderá ser desfeita.
+    `);
+        if (confirma == true) {
+            console.log("O botão OK foi clicado");
+        } else {
+            console.log("O botão CANCELAR foi clicado");
+        };
+    </script>
+
+</body>
+
+</html>

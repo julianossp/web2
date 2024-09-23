@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <button onclick="addItem()">Adiciona item</button>
+    <button onclick="removeItem()">Remove item</button>
+
+    <script>
+        function addItem() {
+            //cria um nome <li>
+                var newItem = document.createElement('li');
+                newItem.textContent = prompt('Insira um novo item a lista');
+
+                //Adiciona o novo elemento à lista
+                document.getElementById('list').appendChild(newItem);
+        }
+
+        function removeItem(){
+            //seleciona o último elemento da lista
+            var lista = document.getElementById('list');
+            var lastItem = lista.lastElementChild;
+
+            //remove o último elemento da lista
+            lista.removeChild(lastItem);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <span id="cont">250</span> Restantes <br>
+  <textarea id="texto" rows="10" cols="50" onkeyup="limite_textarea(this.value)"></textarea>
+
+  <script>
+    function limite_textarea(valor){
+      let quant = 250;
+      let total = valor.length;
+      if (total <= quant){
+        resto = quant - total;
+        document.getElementById('cont').innerHTML = resto;
+      } else {
+        document.getElementById('texto').value = valor.substr(0,quant);
+      }
+    }
+  </script>
+</body>
+</html>
